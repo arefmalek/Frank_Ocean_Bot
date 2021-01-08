@@ -1,0 +1,9 @@
+# python cache
+__pycache__/
+
+
+#ide folders
+.idea/
+.vscode/
+
+keys.json
