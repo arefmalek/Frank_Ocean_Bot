@@ -4,18 +4,6 @@ import requests
 import os
 
 
-with open("keys.json") as f:
-    info = json.load(f)
-
-def redAuth():
-    reddit = praw.Reddit(client_id= info["reddit"]["client_id"],
-                        client_secret= info["reddit"]["client_secret"],
-                        password=info["reddit"]["password"],
-                        user_agent=info["reddit"]["user_agent"],
-                        username=info["reddit"]["username"])
-    return reddit
-
-
 def createImage(reddit, api):
     for submission in reddit.subreddit("frankocean").search(
         'flair:"fan art"', 

@@ -38,9 +38,8 @@ reddit = praw.Reddit(client_id= reddit_client_id,
 
 
 
-FILE_NAME = 'last_tweet.txt'
+FILE_NAME = 'static/last_tweet.txt'
 
-reddit = redFunc.redAuth()
 print(reddit.user.me())
 
 while True:
