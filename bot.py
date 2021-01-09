@@ -1,7 +1,6 @@
 import tweepy
 import praw
 import time
-import json
 
 from datetime import datetime
 from time import sleep
