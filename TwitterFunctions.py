@@ -31,7 +31,7 @@ def reply(api, FILE_NAME):
             api.update_status('@' + tweet.user.screen_name +
                               " Yeah it's working! Current time is " + 
                               datetime.now().strftime("%H:%M:%S"), tweet.id)
-            api.create_favorite(tweet.id)
-            api.retweet(tweet.id)
+            # api.create_favorite(tweet.id)
+            # api.retweet(tweet.id)
             store_last_tweet(FILE_NAME, tweet.id)
             print("completed reading!")
