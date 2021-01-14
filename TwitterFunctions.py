@@ -22,8 +22,9 @@ def store_last_tweet(filename, last_tweet_id):
 
 def reply(api, FILE_NAME):
     tweets = api.mentions_timeline(read_last_tweet(FILE_NAME), tweet_mode='extended')
-    for tweet in tweets:
+    for tweet in reversed(tweets):
         if (tweet.id == read_last_tweet(FILE_NAME)):
+            print("same")
             return
         
         if "#blondedbot" in tweet.full_text.lower():
