@@ -1,4 +1,5 @@
 import tweepy
+from datetime import datetime
 
 
 def read_last_tweet(filename):
@@ -26,7 +27,7 @@ def reply(api, FILE_NAME):
             print(str(tweet.id) + " - " + tweet.full_text)
             api.update_status('@' + tweet.user.screen_name +
                               " Yeah it's working! Current time is " + 
-                              now.strftime("%H:%M"), tweet.id)
+                              datetime.now().strftime("%H:%M:%S"), tweet.id)
             api.create_favorite(tweet.id)
             api.retweet(tweet.id)
             store_last_tweet(FILE_NAME, tweet.id)
