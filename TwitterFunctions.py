@@ -25,7 +25,8 @@ def reply(api, FILE_NAME):
         if "#blondedbot" in tweet.full_text.lower():
             print(str(tweet.id) + " - " + tweet.full_text)
             api.update_status('@' + tweet.user.screen_name +
-                              " Yeah it's working!", tweet.id)
+                              " Yeah it's working! Current time is " + 
+                              now.strftime("%H:%M"), tweet.id)
             api.create_favorite(tweet.id)
             api.retweet(tweet.id)
             store_last_tweet(FILE_NAME, tweet.id)

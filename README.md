@@ -1,20 +1,19 @@
 # Frank Ocean Twitter Bot
 
-A little winter break project I did to appreciate one of my favorite musicians :)
+A little winter break project to pay homage to one of my favorite musicians :)
 
-## What it does
+#
+
+# What it does
 
 I made the bot with two primary functionalities:
-<li>
-  <ul>responding to people's questions - really it only answerws the question of "does it work"
-    
-    ![](img/post.png)
-  </ul>
-  <ul>posting once everyday
-    
-    ![](img/reply.png)
-  </ul>
-</li>
+
+## Posts daily content from r/frankocean
+![](post.png)
+
+
+## Responding to questions
+![](reply.png?raw=true "Title")
 
 
 ## How it works
