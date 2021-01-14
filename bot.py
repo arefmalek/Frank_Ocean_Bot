@@ -39,8 +39,6 @@ reddit = praw.Reddit(client_id= reddit_client_id,
 
 FILE_NAME = 'static/last_tweet.txt'
 
-print(reddit.user.me())
-
 while True:
     now = datetime.now()
     current_time = now.strftime("%H:%M")
