@@ -23,6 +23,9 @@ def store_last_tweet(filename, last_tweet_id):
 def reply(api, FILE_NAME):
     tweets = api.mentions_timeline(read_last_tweet(FILE_NAME), tweet_mode='extended')
     for tweet in tweets:
+        if (tweet.id == read_last_tweet(FILE_NAME)):
+            return
+        
         if "#blondedbot" in tweet.full_text.lower():
             print(str(tweet.id) + " - " + tweet.full_text)
             api.update_status('@' + tweet.user.screen_name +
