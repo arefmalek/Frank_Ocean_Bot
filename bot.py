@@ -42,11 +42,11 @@ FILE_NAME = 'static/last_tweet.txt'
 while True:
     now = datetime.now()
     current_time = now.strftime("%H:%M")
-    if ("23:11" <= current_time <= "23:12"):
+    if ("23:10" <= current_time <= "23:12"):
         redFunc.createImage(reddit, api)
         print("poggers")
         sleep(60)
 
     tf.reply(api, FILE_NAME)
-    sleep(5)
+    sleep(75)
     print("here")
