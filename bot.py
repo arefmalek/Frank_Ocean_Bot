@@ -39,6 +39,9 @@ reddit = praw.Reddit(client_id= reddit_client_id,
 
 FILE_NAME = 'static/last_tweet.txt'
 
+redFunc.createImage(reddit, api)
+print("did the thing")
+
 while True:
     now = datetime.now()
     current_time = now.strftime("%H:%M")
