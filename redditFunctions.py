@@ -15,7 +15,7 @@ def createImage(reddit, api):
     print(post.author)
     message = "Today's post is from u/" + str(post.author)
 
-    filename = 'pics/temp.jpg'
+    filename = 'static/temp.jpg'
     request = requests.get(post.url, stream=True)
 
     if request.status_code == 200:
