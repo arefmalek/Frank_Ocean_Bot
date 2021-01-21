@@ -10,7 +10,7 @@ def createImage(reddit, api):
 
     for submission in reddit.subreddit("frankocean").search(
         'flair:"fan art"', 
-        limit=10,
+        limit=5,
         time_filter="day"
         ):
         if ".jpg" in submission.url:
@@ -19,7 +19,7 @@ def createImage(reddit, api):
     pick = randint(0, len(choices) - 1)
     post = choices[pick]
     print(post.author)
-    message = "Today's post is from u/" + str(post.author)
+    message = "Post by u/" + str(post.author)
 
     filename = 'static/temp.jpg'
     request = requests.get(post.url, stream=True)
